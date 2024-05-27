@@ -5,7 +5,7 @@ import MonthButton from './Components/MonthButton';
 function App() {
   const months = [
     { name: 'Jan', days: 31 },
-    { name: 'Feb', days: 29 }, // можна додати обробку для високосного року
+    { name: 'Feb', days: 29 },
     { name: 'Mar', days: 31 },
     { name: 'Apr', days: 30 },
     { name: 'May', days: 31 },
