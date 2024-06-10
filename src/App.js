@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
-import MonthButton from './Components/MonthButton';
+import MonthButton from './Components/MonthButton/MonthButton';
+import DayList from './Components/TableHeader/TableHeader';
+import CreateRowButton from './Components/CreateRowButton/CreateRowButton';
 
 function App() {
   const months = [
@@ -18,25 +20,25 @@ function App() {
     { name: 'Dec', days: 31 },
   ];
 
-  const [selectedMonth, setSelectedMonth] = useState(null);
+  const [selectedMonth, setSelectedMonth] = useState(months[5]);
 
+  // set June as default month in table 
+  useEffect(() => {
+    setSelectedMonth(months[5]);
+  }, []);
+
+
+  // output table with mount amount of days
   const handleMonthClick = (month) => {
     setSelectedMonth(month);
   };
 
-  const renderDays = (days) => {
-    let daysArray = [];
-    for (let i = 1; i <= days; i++) {
-      daysArray.push(i);
-    }
-    return daysArray.map(day => <span key={day}>{day} </span>);
-  };
 
   return (
     <div className="App">
       <header className="App-header">
         <p>
-          Hello, World!!!!
+          Habit Tracker Soft
         </p>
       </header>
       <div>
@@ -51,11 +53,14 @@ function App() {
       <div>
         {selectedMonth && (
           <div>
-            <h2>{selectedMonth.name}</h2>
-            <p>{renderDays(selectedMonth.days)}</p>
+            <DayList days={selectedMonth.days} />
           </div>
         )}
       </div>
+
+
+
+
     </div>
   );
 }
