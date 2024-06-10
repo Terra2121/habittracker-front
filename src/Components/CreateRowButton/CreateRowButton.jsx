@@ -4,7 +4,7 @@ import './CreateRowButton.css';
 const CreateRowButton = ({ onClick}) =>{
 
     return (
-        <button className="create-row-button" onClick={() => onClick()}>Add Row </button>
+        <button className="create-row-btn" onClick={() => onClick()}>Add Row </button>
       );
 
 }

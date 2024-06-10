@@ -1,7 +1,7 @@
 import React from 'react';
 import './MonthTable.css';
 
-const MonthTable = ({ days }) => {
+const MonthTable = ({ days, rows }) => {
 
 
   let daysArray = [];
@@ -10,7 +10,7 @@ const MonthTable = ({ days }) => {
   }
 
   return (
-    <table>
+    <table className="month-table">
       <thead>
         <tr>
           {daysArray.map(day => (
@@ -19,21 +19,15 @@ const MonthTable = ({ days }) => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          {daysArray.map(day => (
-            <td key={`row1-${day}`}>Row 1</td>
-          ))}
-        </tr>
-        <tr>
-          {daysArray.map(day => (
-            <td key={`row2-${day}`}>{day}</td>
-          ))}
-        </tr>
-        <tr>
-          {daysArray.map(day => (
-            <td key={`row3-${day}`}>Row 3</td>
-          ))}
-        </tr>
+        {[...Array(rows)].map((_, rowIndex) => (
+          <tr key={`row-${rowIndex}`}>
+            {daysArray.map(day => (
+              <td key={`row${rowIndex + 1}-${day}`}>
+                <input type="checkbox" />
+              </td>
+            ))}
+          </tr>
+        ))}
       </tbody>
     </table>
   );

@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+
+  
 }
 
 .App-header {
@@ -12,5 +14,18 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.tables-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.table-wrapper {
+  margin: 0 5px;
+}
+
+
+
+
 
 

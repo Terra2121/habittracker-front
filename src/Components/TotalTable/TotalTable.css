@@ -1,0 +1,29 @@
+.total-table {
+    border-collapse: collapse;
+    width: 100%;
+    /* background-color: brown; */
+}
+  
+  .total-table th, .total-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    width: 50px; 
+    height: 33px;
+  }
+  
+  .total-table th {
+    background-color: #ddd;
+  }
+
+  .total-table tr {
+    height: 50px;
+  }
+  
+  .total-table tr:nth-child(even) {
+    background-color: #ddd;
+  }
+  
+  .total-table tr:hover {
+    background-color: #ddd;
+  }

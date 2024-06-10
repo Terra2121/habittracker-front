@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import DayTable from '../MonthTable/MonthTable';
 import CreateRowButton from '../CreateRowButton/CreateRowButton';
+import MonthTable from '../MonthTable/MonthTable';
 
-const DayList = ({ days }) => {
+const DayList = ({ days, rows }) => {
 
-  const [rows, setRows] = useState(3);
+  // default amount of table rows
+  //const [rows, setRows] = useState(3);
 
+  // array with month amount of days
   let daysArray = [];
   for (let i = 1; i <= days; i++) {
     daysArray.push(i);
@@ -24,9 +27,9 @@ const DayList = ({ days }) => {
           ))}
         </tbody>
       </table>
-      <div>
+      {/* <div>
         <CreateRowButton onClick={() => setRows(prevRows => prevRows + 1)} />
-      </div>
+      </div> */}
     </div>
   );
 };
