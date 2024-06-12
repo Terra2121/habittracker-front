@@ -1,7 +1,6 @@
 .total-table {
     border-collapse: collapse;
     width: 100%;
-    /* background-color: brown; */
 }
   
   .total-table th, .total-table td {
@@ -10,18 +9,24 @@
     text-align: center;
     width: 50px; 
     height: 33px;
+    background-color: transparent; 
+    color: white; 
   }
   
   .total-table th {
-    background-color: #ddd;
+    background-color: transparent;
+    color: white;
   }
 
   .total-table tr {
     height: 50px;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
   }
   
   .total-table tr:nth-child(even) {
-    background-color: #ddd;
+    background-color: transparent;
   }
   
   .total-table tr:hover {

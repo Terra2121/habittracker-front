@@ -7,19 +7,23 @@
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
+    height: 33px;
+    background-color: transparent; 
+    color: white; 
   }
   
   .habit-table th {
-    background-color: #f4f4f4;
+    background-color: transparent;
   }
   
   .habit-table tr {
     height: 50px;
     text-align: center;
+    color: white;
   }
 
   .habit-table tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: transparent;
   }
   
   .habit-table tr:hover {

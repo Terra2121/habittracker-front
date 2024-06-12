@@ -9,19 +9,17 @@
   text-align: center;
   width: 25px;
   height: 33px;
+  background-color: transparent; 
+  color: white; 
 }
 
 .month-table th {
-  background-color: #f4f4f4;
+  background-color: transparent;
 }
 
 .month-table tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: transparent; 
 }
-
-/* .month-table tr:hover {
-  background-color: #ddd;
-} */
 
 .month-table input[type="checkbox"] {
   width: 100%;
@@ -29,6 +27,7 @@
   margin: 0;
   padding: 0;
   display: block;
+  background-color: white; 
 }
 
   

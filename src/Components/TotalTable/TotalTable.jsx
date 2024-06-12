@@ -7,7 +7,7 @@ const TotalTable = ({ rows }) => {
     <table className="total-table">
       <thead>
         <tr>
-          Total
+          <th>Total</th>
         </tr>
       </thead>
       <tbody>
