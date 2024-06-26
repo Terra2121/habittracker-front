@@ -6,7 +6,7 @@ const MonthButton = ({ month, isActive, onClick}) => {
     <button
       className={`month-button ${isActive ? 'active' : ''}`}
       onClick={onClick}>
-      {month}
+      {month.name}
     </button>
   );
 };
