@@ -1,19 +1,49 @@
-.App {
+.app {
   text-align: center;
 
   
 }
 
-.App-header {
+.app-header {
   background-color: #282c34;
   height: 50px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 0 20px;
 }
+
+.app-title {
+  flex: 1; 
+  text-align: center; 
+}
+
+.user-icon {
+  margin-left: auto;
+  font-size: 10px;
+}
+
+.user-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+}
+
+.user-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.user-name {
+  font-size: 10px;
+  text-align: center;
+  margin-top: 5px;
+}
+
 
 .tables-container {
   display: flex;

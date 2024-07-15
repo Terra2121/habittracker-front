@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import MonthButton from "./Components/MonthButton/MonthButton";
 import Table from "./Components/Table/Table";
+import UserIcon from './Components/UserIcon/UserIcon';
 
 function App() {
   const months = [
@@ -19,33 +20,35 @@ function App() {
     { name: "DEC", days: 31 },
   ];
 
-  const [selectedMonth, setSelectedMonth] = useState(months[5]); // set June as default month in table
+  const [selectedMonth, setSelectedMonth] = useState(months[6]); 
 
-  // output table with selected month
   const handleMonthClick = (month) => {
     setSelectedMonth(month);
   };
 
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Habit Tracker Soft</p>
-      </header>
-      <div>
-        {months.map((month) => (
-          <MonthButton
-            key={month.name}
-            month={month}
-            isActive={selectedMonth.name === month.name}
-            onClick={() => handleMonthClick(month)}
-          />
-        ))}
+    
+      <div className="app">
+        <header className="app-header">
+          <p className="app-title">HABIT TRACKER SOFT</p>
+          <UserIcon className="user-icon"/>
+        </header>
+        <div>
+          {months.map((month) => (
+            <MonthButton
+              key={month.name}
+              month={month}
+              isActive={selectedMonth.name === month.name}
+              onClick={() => handleMonthClick(month)}
+            />
+          ))}
+        </div>
+        <div>
+          <Table selectedMonth={selectedMonth} />
+        </div>
       </div>
-      <div>
-        <Table selectedMonth={selectedMonth} />
-      </div>
-       
-    </div>
   );
 }
 
