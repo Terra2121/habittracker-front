@@ -6,7 +6,7 @@
 
 .app-header {
   background-color: #282c34;
-  height: 50px;
+  height: 75px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -55,9 +55,3 @@
 .table-wrapper {
   margin: 0 5px;
 }
-
-
-
-
-
-

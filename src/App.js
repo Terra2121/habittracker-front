@@ -20,20 +20,22 @@ function App() {
     { name: "DEC", days: 31 },
   ];
 
-  const [selectedMonth, setSelectedMonth] = useState(months[6]); 
+  const [selectedMonth, setSelectedMonth] = useState(months[7]); 
+  const [userId, setUserId] = useState(null);
+
 
   const handleMonthClick = (month) => {
     setSelectedMonth(month);
   };
-
-  
 
   return (
     
       <div className="app">
         <header className="app-header">
           <p className="app-title">HABIT TRACKER SOFT</p>
-          <UserIcon className="user-icon"/>
+          <UserIcon 
+            userId={userId} 
+          />
         </header>
         <div>
           {months.map((month) => (
@@ -46,10 +48,15 @@ function App() {
           ))}
         </div>
         <div>
-          <Table selectedMonth={selectedMonth} />
+          <Table 
+            selectedMonth={selectedMonth} 
+            userId={userId} 
+            setUserId={setUserId}
+          />
         </div>
       </div>
   );
 }
 
 export default App;
+

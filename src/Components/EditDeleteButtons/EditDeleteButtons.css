@@ -1,0 +1,26 @@
+.edit-btn, .delete-btn {
+    padding: 8px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #398B93;
+    border-radius: 5px;
+    color: white;
+    display: inline-flex; 
+    align-items: center;  
+    justify-content: center; 
+}
+
+.edit-btn, .delete-btn  {
+    width: 40px; 
+    height: 40px; 
+}
+
+.edit-btn img, .delete-btn img {
+    width: 38px;  
+    height: 38px;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+    background-color: #317279; 
+}
